@@ -1,5 +1,5 @@
 
-Name of Quantlet: 'DR_GATES_Correlation_plot'
+Name of Quantlet: 'DR_GATES_Correlation_Plot'
 
 Published in: 'Group Average Treatment Effects for Observational Studies'
 

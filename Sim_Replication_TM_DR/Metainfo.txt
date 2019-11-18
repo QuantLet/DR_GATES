@@ -1,11 +1,11 @@
 
-Name of Quantlet: 'DR_GATES_Correlation_plot'
+Name of Quantlet: 'DR_GATES_TM_DR'
 
 Published in: 'Group Average Treatment Effects for Observational Studies'
 
-Description: 'Plots the correlation between variables including the density and pearson correlation coefficient'
+Description: 'Replication code for the simulation study. Comparison of the two-model approach and the doubly-robust estimator on different data generating processes'
 
-Keywords: 'correlation, density, pearson'
+Keywords: 'simulation study, two-model, doubly-robust, treatment effect, CATE, GATE'
 
 Author: 'Daniel Jacob'
 
@@ -17,4 +17,4 @@ Datafile: ''
 
 Input: 'dataset or DGP'
 
-Output:  'correlation between variables'
+Output:  ''

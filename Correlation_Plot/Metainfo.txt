@@ -3,9 +3,9 @@ Name of Quantlet: 'DR_GATES_Correlation_Plot'
 
 Published in: 'Group Average Treatment Effects for Observational Studies'
 
-Description: 'Plots the correlation between variables including the density and pearson correlation coefficient'
+Description: 'We provide code to generate a correlation plot for multiple variables. The plot contains the density and the pearson correlation coefficient. The color management makes it easy to read and interpret the direction and strength of the correlation.'
 
-Keywords: 'correlation, density, pearson'
+Keywords: 'correlation, density, pearson coefficient, plot, simulation study, '
 
 Author: 'Daniel Jacob'
 
@@ -15,6 +15,6 @@ Submitted:  ''
 
 Datafile: ''
 
-Input: 'dataset or DGP'
+Input: 'dataset or data generating process'
 
 Output:  'correlation between variables'

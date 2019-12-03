@@ -2,9 +2,9 @@
 
 
 # create matrix of DGP settings
-settings <- as.data.frame(matrix(c(1000,1000,2000,2000,2000,2000,10,20,10,20,20,20), ncol=2))
+settings <- as.data.frame(matrix(c(1000,1000,5000,5000,5000,5000,100,200,100,200,200,500), ncol=2))
 settings$V3 <- c(F,F,F,F,T,T)
-settings$V4 <- c("constant","con","con","binary","con","binary")
+settings$V4 <- c("constant","con_lin","con_non","binary","con_non","binary")
 settings$V5 <- c(0.5,NA,NA,NA,NA,NA)
 
 

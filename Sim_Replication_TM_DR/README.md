@@ -6,4 +6,4 @@ This is the replication code for the simulation study in the preprint paper "[Gr
 
 
 
-![Picture1](two-model_vs_dr.png)
+![Picture1](TMA_vs_DOGATES.png)

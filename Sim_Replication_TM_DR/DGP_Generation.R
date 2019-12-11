@@ -39,24 +39,26 @@ datagen <- function(N,y,k,random_d,theta,var) {
   
   ### Options for theta
   if (theta == "con_lin"){
-    theta <- as.vector(z[,1] + (z[,2]>0) + rnorm(N,0,0.1))
+    theta_s <- as.vector(z[,1] + (z[,2]>0) + rnorm(N,0,0.1))
+    theta <- (theta_s - min(theta_s)) * (1 - 0.1) / (max(theta_s) - min(theta_s)) +
+      0.1
   } else
   if (theta == "con_non") {
     theta_s <- as.vector(sin(z %*% b))
-    theta <- (theta_s - min(theta_s)) * (0.3 - 0.1) / (max(theta_s) - min(theta_s)) +
+    theta <- (theta_s - min(theta_s)) * (1 - 0.1) / (max(theta_s) - min(theta_s)) +
       0.1
   } else if (theta == "binary") {
     theta_low <-
       rbinom(N, pnorm((z[, 6] * (z[, 1] %*% t(
         z[, 5]
       )) * z[, 2]) ^ 2), size = 1)
-    theta <-ifelse(theta_low == 1, 0.3, 0.1)
+    theta <-ifelse(theta_low == 1, 1, 0.1)
     } else {
     theta == theta
   }
   
   
-  g <- as.vector(cos(z %*% b) ^ 2)
+  g <- as.vector(cos(z %*% b) ^ 2 + z[,k/2] + z[,k/4]*z[,k/10])
   
   
   if(y=="binary") {

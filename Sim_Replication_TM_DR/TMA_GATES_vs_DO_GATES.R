@@ -7,10 +7,10 @@ settings$V3 <- c(F,F,F,F,T,T)
 settings$V4 <- c("constant","con_lin","con_non","binary","con_non","binary")
 settings$V5 <- c(0.5,NA,NA,NA,NA,NA)
 
-settings <- settings[2:3,]
+
 
 S = 10
-M <- 5
+M <- 50
 ntile <- 5
 
 error_matrix <-  matrix(NA,S,3)
@@ -135,7 +135,11 @@ for(t in 1:nrow(settings)) {
       
       S2 <- df_main$S +runif(length(df_main$S), 0, 0.00001) # Include white noise to guarantee that the score (S) differs from the baseline effect
      
-      SG <- cut(S2, breaks = ntile)
+      breaks    <- quantile(S2, seq(0,1, 0.2),  include.lowest =T)
+      breaks[1] <- breaks[1] - 0.01 # Offset for lower tails 
+      breaks[6] <- breaks[6] + 0.01 # Offset for upper tails
+      
+      SG <- cut(S2, breaks = breaks)
       
       
       
